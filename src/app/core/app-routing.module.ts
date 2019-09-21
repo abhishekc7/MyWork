@@ -5,6 +5,7 @@ import {HomeComponent } from '../components/home/home.component';
 
 import {PortfolioComponent } from '../components/portfolio/portfolio.component';
 import {ContactComponent } from '../components/contact/contact.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 
 const routes: Routes = [ 
@@ -20,7 +21,7 @@ const routes: Routes = [
  ]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, { useHash: true })],
     exports: [RouterModule]
 })
 
